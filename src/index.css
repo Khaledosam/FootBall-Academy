@@ -1,0 +1,22 @@
+* {
+  font-family: "Open Sans";
+  margin: 0 auto;
+  padding: 0;
+}
+:root {
+  font-family: "Open Sans";
+  --main-Title: #091524;
+  --main-color: #FFFFFF;
+  --secondry-color: #287BCA;
+  --pragrh-color: #C0C0C0;
+}
+body {
+  width: 1440px;
+  height: 5537px;
+  top: -51px;
+  left: 2877px;
+  gap: 0px;
+  border-radius: 20px;
+  opacity: 0px;
+  /* border: 1px solid black; */
+}
