@@ -5,10 +5,10 @@ function SectionSix() {
   return (
     <Box
       sx={{
-        position: "relative",
+        position: "absolute",
         width: "1440px",
         height: "589px",
-        top: "3300px",
+        top: "3340px",
         // border: "1px solid black",
       }}
     >

@@ -74,7 +74,25 @@ function SectionONe() {
         alt="the scrore shoes"
         src="./images/s one.png"
       />
-      <StartButton />
+      <Button
+        variant="contained"
+        sx={{
+          width: "183px",
+          height: "60px",
+          top: "540px",
+          left: "120px",
+
+          borderRadius: "4px ",
+
+          fontSize: "18px",
+          fontWeight: 600,
+          lineHeight: "24.51px",
+          letterSpacing: "0.5px",
+          textAlign: "left",
+        }}
+      >
+        Get started
+      </Button>
 
       <Button
         variant="text"

@@ -15,7 +15,7 @@ export const mainTitle = createTheme({
           fontWeight: 800,
           lineHeight: "3.9rem",
           letterSpacing: "-3.5px",
-          textAlign: "left",
+          textAlign: "center",
           color: "var(--main-Title)",
         },
       },
