@@ -1,5 +1,6 @@
 import { Box, ThemeProvider, Typography } from "@mui/material";
 import { mainTitle } from "../mui componanets/textStyles";
+import { Height } from "@mui/icons-material";
 
 function SectionFive() {
   const myPhoto = [
@@ -8,10 +9,7 @@ function SectionFive() {
       src: "./images/five one.png",
       style: {
         width: "387px",
-        height: "276px",
-        top: "182px",
-        left: "120px",
-        position: "absolute",
+        margin: "10px",
       },
     },
     {
@@ -19,10 +17,7 @@ function SectionFive() {
       src: "./images/five two.png",
       style: {
         width: "386px",
-        height: "349px",
-        top: "183px",
-        left: "527px",
-        position: "absolute",
+        margin: "10px 10px -70px 10px",
       },
     },
     {
@@ -30,10 +25,8 @@ function SectionFive() {
       src: "./images/five three.png",
       style: {
         width: "387px",
-        height: "276px",
-        top: "182px",
-        left: "933px",
-        position: "absolute",
+        margin: "10px",
+        Height: "276px",
       },
     },
     {
@@ -41,10 +34,7 @@ function SectionFive() {
       src: "./images/five four.png",
       style: {
         width: "387px",
-        height: "350px",
-        top: "478px",
-        left: "120px",
-        position: "absolute",
+        margin: "10px",
       },
     },
     {
@@ -52,10 +42,7 @@ function SectionFive() {
       src: "./images/five five.png",
       style: {
         width: "386px",
-        height: "275px",
-        top: "552px",
-        left: "527px",
-        position: "absolute",
+        margin: "10px",
       },
     },
     {
@@ -63,10 +50,7 @@ function SectionFive() {
       src: "./images/five six.png",
       style: {
         width: "387px",
-        height: "350px",
-        top: "478px",
-        left: "933px",
-        position: "absolute",
+        margin: "10px",
       },
     },
   ];
@@ -74,19 +58,16 @@ function SectionFive() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        width: "1440px",
-        height: "902px",
-        top: "2438px",
-        // border: "1px solid black",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ top: "80px", left: "458px", width: "524px" }}>
+        <Typography sx={{ width: "524px", alignSelf: "center", mb: "50px" }}>
           LET SEE WHAT WE DO
         </Typography>
       </ThemeProvider>
-      <Box>
+      <Box sx={{ width: "125vh" }}>
         {myPhoto.map((item) => {
           return <img src={item.src} alt={item.alt} style={item.style}></img>;
         })}

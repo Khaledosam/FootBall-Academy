@@ -5,12 +5,8 @@ export const mainTitle = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          position: "absolute",
           width: "466px",
-          height: "62px",
-          top: "136px",
-          left: "730px",
-          display: "flex",
+
           fontSize: "3rem",
           fontWeight: 800,
           lineHeight: "3.9rem",
@@ -27,7 +23,6 @@ export const subTitle = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          position: "absolute",
           fontFamily: "Open Sans",
           fontSize: "32px",
           fontWeight: 700,
@@ -44,7 +39,6 @@ export const pragrhStyle = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          position: "absolute",
           width: "242px",
           height: "132px",
           top: "354px",

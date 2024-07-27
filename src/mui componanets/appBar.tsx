@@ -11,12 +11,16 @@ const pages = ["Home", "Acadmecs", "Programs", "About"];
 
 function AppBarr() {
   return (
-    <AppBar position="static" sx={{ borderRadius: "20px 20px 0 0" }}>
+    <AppBar
+      position="static"
+      sx={{ borderRadius: "20px 20px 0 0", backgroundColor: "#091524" }}
+    >
       <Container
         sx={{
-          width: "830px",
+          width: "1200px",
           right: "280px",
-          position: "relative",
+          display: "flex",
+          alignItems: "center",
           top: "19px",
         }}
       >
@@ -31,14 +35,6 @@ function AppBarr() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 15,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 900,
-              letterSpacing: ".3rem",
-              color: "#287BCA",
-              textDecoration: "none",
-              fontSize: "25px",
-              top: "19px",
             }}
           >
             kaison
@@ -72,28 +68,10 @@ function AppBarr() {
             ))}
           </Box>
         </Toolbar>
+        <Box sx={{}}>
+          <Menu sx={{}} />
+        </Box>
       </Container>
-      <Box
-        sx={{
-          width: "62px",
-          height: "62px",
-          position: "absolute",
-          top: "19px",
-          left: "1258px",
-        }}
-      >
-        <Menu
-          sx={{
-            width: "24px",
-            height: "24px",
-            top: "19px",
-            left: "19px",
-            position: "absolute",
-            color: "#ffffff",
-            cursor: "pointer",
-          }}
-        />
-      </Box>
     </AppBar>
   );
 }

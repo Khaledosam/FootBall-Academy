@@ -6,100 +6,83 @@ function SectionFour() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        width: "1440px",
-        height: "378px",
-        top: "2060px",
+        display: "flex",
+        flexDirection: "column",
+        mt: "100px",
+
         backgroundColor: "var(--main-color)",
       }}
     >
       <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ top: "80px", left: "362px", width: "716px" }}>
+        <Typography sx={{ width: "716px", alignSelf: "center" }}>
           BEST IN FOOTBALL ACADEMY
         </Typography>
       </ThemeProvider>
-      <Box>
-        <CheckCircle
-          sx={{
-            position: "absolute",
-            width: "50px",
-            height: "50px",
-            top: "214px",
-            left: "165px",
-            color: "var(--secondry-color)",
-          }}
-        />
-
-        <ThemeProvider theme={subTitle}>
-          <Typography
+      <Box sx={{ display: "flex", mb: "100px", mt: "70px", width: "140vh" }}>
+        <Box sx={{ display: "flex" }}>
+          <CheckCircle
             sx={{
-              fontSize: "24px",
-              lineHeight: "30px",
-              width: "195px",
-              height: "72px",
-              top: "204px",
-              left: "237px",
+              width: "50px",
+              height: "50px",
+              color: "var(--secondry-color)",
             }}
-          >
-            Personal academic tutors
-          </Typography>
-        </ThemeProvider>
-      </Box>
-      <Box>
-        <CheckCircle
-          sx={{
-            position: "absolute",
-            width: "50px",
-            height: "50px",
-            top: "214px",
-            left: "602px",
+          />
 
-            color: "var(--secondry-color)",
-          }}
-        />
-
-        <ThemeProvider theme={subTitle}>
-          <Typography
+          <ThemeProvider theme={subTitle}>
+            <Typography
+              sx={{
+                fontSize: "24px",
+                lineHeight: "30px",
+                width: "195px",
+              }}
+            >
+              Personal academic tutors
+            </Typography>
+          </ThemeProvider>
+        </Box>
+        <Box sx={{ display: "flex" }}>
+          <CheckCircle
             sx={{
-              fontSize: "24px",
-              lineHeight: "30px",
-              width: "195px",
-              height: "72px",
-              top: "204px",
-              left: "660px",
+              width: "50px",
+              height: "50px",
+
+              color: "var(--secondry-color)",
             }}
-          >
-            Competitive matches
-          </Typography>
-        </ThemeProvider>
-      </Box>
-      <Box>
-        <CheckCircle
-          sx={{
-            position: "absolute",
-            width: "50px",
-            height: "50px",
-            top: "214px",
-            left: "998px",
-
-            color: "var(--secondry-color)",
-          }}
-        />
-
-        <ThemeProvider theme={subTitle}>
-          <Typography
+          />
+          <ThemeProvider theme={subTitle}>
+            <Typography
+              sx={{
+                fontSize: "24px",
+                lineHeight: "30px",
+                width: "195px",
+              }}
+            >
+              Competitive matches
+            </Typography>
+          </ThemeProvider>
+        </Box>
+        <Box sx={{ display: "flex" }}>
+          <CheckCircle
             sx={{
-              fontSize: "24px",
-              lineHeight: "30px",
-              width: "195px",
-              height: "72px",
-              top: "204px",
-              left: "1070px",
+              width: "50px",
+              height: "50px",
+
+              color: "var(--secondry-color)",
             }}
-          >
-            Professional games
-          </Typography>
-        </ThemeProvider>
+          />
+
+          <ThemeProvider theme={subTitle}>
+            <Typography
+              sx={{
+                fontSize: "24px",
+                lineHeight: "30px",
+                width: "195px",
+              }}
+            >
+              Professional games
+            </Typography>
+          </ThemeProvider>
+        </Box>
       </Box>
     </Box>
   );

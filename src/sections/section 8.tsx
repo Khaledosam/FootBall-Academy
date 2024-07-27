@@ -1,22 +1,19 @@
 import { Box, Button, ThemeProvider, Typography } from "@mui/material";
 import { mainTitle, pragrhStyle } from "../mui componanets/textStyles";
-import StartButton from "../mui componanets/buttonStart";
 
 function SectionEight() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        width: "1440px",
-        height: "470px",
-        top: " 4520px",
-        border: "1px solid black",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "20px",
+        mt: "100px",
       }}
     >
       <ThemeProvider theme={mainTitle}>
-        <Typography
-          sx={{ top: "80px", left: "431px", width: "577px", height: "124px" }}
-        >
+        <Typography sx={{ width: "577px" }}>
           START YOUR JOURNEY WITH US
         </Typography>
       </ThemeProvider>
@@ -27,7 +24,7 @@ function SectionEight() {
             height: "66px",
             top: "224px",
             left: "380px",
-            position: "absolute",
+
             textAlign: "center",
           }}
         >
@@ -40,8 +37,6 @@ function SectionEight() {
         sx={{
           width: "183px",
           height: "60px",
-          top: "330px",
-          left: "628px",
           borderRadius: "4px ",
           fontSize: "18px",
           fontWeight: 600,

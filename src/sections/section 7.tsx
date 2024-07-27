@@ -12,7 +12,6 @@ function SectionSeven() {
         top: "170px",
         left: "120px",
         borderRadius: "8px ",
-        position: "absolute",
       },
       styleP: {
         width: "311px",
@@ -33,7 +32,7 @@ function SectionSeven() {
             height: "48px",
             top: "263px",
             left: "289px",
-            position: "absolute",
+
             color: "var(--main-color)",
           }}
         />
@@ -48,7 +47,6 @@ function SectionSeven() {
         top: "170px",
         left: "527px",
         borderRadius: "8px ",
-        position: "absolute",
       },
       styleP: {
         width: "311px",
@@ -69,7 +67,7 @@ function SectionSeven() {
             height: "48px",
             top: "263px",
             left: "696px",
-            position: "absolute",
+
             color: "var(--main-color)",
           }}
         />
@@ -84,7 +82,6 @@ function SectionSeven() {
         top: "170px",
         left: "934px",
         borderRadius: "8px ",
-        position: "absolute",
       },
       styleP: {
         width: "192px",
@@ -104,7 +101,7 @@ function SectionSeven() {
             height: "48px",
             top: "263px",
             left: "1103px",
-            position: "absolute",
+
             color: "var(--main-color)",
           }}
         />
@@ -114,22 +111,26 @@ function SectionSeven() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        width: "1440px",
-        height: "591px",
-        top: " 3929px",
-        // border: "1px solid black",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ top: "65px", left: "462px", width: "521px" }}>
+        <Typography sx={{ width: "521px", alignSelf: "center", mt: "100px" }}>
           STILL HAVE DOUBTS?
         </Typography>
       </ThemeProvider>
-      <Box>
+      <Box display={"flex"} gap={"20px"} mt={"50px"}>
         {myPhoto.map((item) => {
           return (
-            <Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "15px",
+              }}
+            >
               <img src={item.src} alt={item.alt} style={item.style}></img>
               <ThemeProvider theme={subTitle}>
                 <Typography sx={item.styleP}>{item.content}</Typography>
