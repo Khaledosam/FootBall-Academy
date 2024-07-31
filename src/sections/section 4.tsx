@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
-import { ThemeProvider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { mainTitle, subTitle } from "../mui componanets/textStyles";
+
 function SectionFour() {
   return (
     <Box
@@ -9,79 +9,91 @@ function SectionFour() {
         display: "flex",
         flexDirection: "column",
         mt: "100px",
-
-        backgroundColor: "var(--main-color)",
       }}
     >
-      <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ width: "716px", alignSelf: "center" }}>
-          BEST IN FOOTBALL ACADEMY
-        </Typography>
-      </ThemeProvider>
-      <Box sx={{ display: "flex", mb: "100px", mt: "70px", width: "140vh" }}>
-        <Box sx={{ display: "flex" }}>
+      <Typography
+        variant="h3"
+        sx={{
+          alignSelf: "center",
+          color: "text.secondary",
+          lineHeight: "3.9rem",
+          letterSpacing: "-3.5px",
+          textAlign: "center",
+        }}
+      >
+        BEST IN FOOTBALL ACADEMY
+      </Typography>
+
+      <Box
+        sx={{
+          display: "flex",
+          mb: "100px",
+          mt: "70px",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <CheckCircle
             sx={{
               width: "50px",
               height: "50px",
-              color: "var(--secondry-color)",
+              color: "customBg.main",
             }}
           />
 
-          <ThemeProvider theme={subTitle}>
-            <Typography
-              sx={{
-                fontSize: "24px",
-                lineHeight: "30px",
-                width: "195px",
-              }}
-            >
-              Personal academic tutors
-            </Typography>
-          </ThemeProvider>
+          <Typography
+            variant="h5"
+            sx={{
+              lineHeight: "30px",
+              color: "text.secondary",
+              textAlign: "left",
+              mr: "100px",
+            }}
+          >
+            Personal academic tutors
+          </Typography>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <CheckCircle
             sx={{
               width: "50px",
               height: "50px",
-
-              color: "var(--secondry-color)",
+              color: "customBg.main",
             }}
           />
-          <ThemeProvider theme={subTitle}>
-            <Typography
-              sx={{
-                fontSize: "24px",
-                lineHeight: "30px",
-                width: "195px",
-              }}
-            >
-              Competitive matches
-            </Typography>
-          </ThemeProvider>
+
+          <Typography
+            variant="h5"
+            sx={{
+              lineHeight: "30px",
+              color: "text.secondary",
+              textAlign: "left",
+              mr: "100px",
+            }}
+          >
+            Competitive matches
+          </Typography>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <CheckCircle
             sx={{
               width: "50px",
               height: "50px",
-
-              color: "var(--secondry-color)",
+              color: "customBg.main",
             }}
           />
 
-          <ThemeProvider theme={subTitle}>
-            <Typography
-              sx={{
-                fontSize: "24px",
-                lineHeight: "30px",
-                width: "195px",
-              }}
-            >
-              Professional games
-            </Typography>
-          </ThemeProvider>
+          <Typography
+            variant="h5"
+            sx={{
+              lineHeight: "30px",
+              color: "text.secondary",
+              textAlign: "left",
+              mr: "100px",
+            }}
+          >
+            Professional games
+          </Typography>
         </Box>
       </Box>
     </Box>

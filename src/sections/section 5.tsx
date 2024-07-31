@@ -1,6 +1,4 @@
-import { Box, ThemeProvider, Typography } from "@mui/material";
-import { mainTitle } from "../mui componanets/textStyles";
-import { Height } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 
 function SectionFive() {
   const myPhoto = [
@@ -26,7 +24,6 @@ function SectionFive() {
       style: {
         width: "387px",
         margin: "10px",
-        Height: "276px",
       },
     },
     {
@@ -60,14 +57,24 @@ function SectionFive() {
       sx={{
         display: "flex",
         flexDirection: "column",
+        mt: "50px",
       }}
     >
-      <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ width: "524px", alignSelf: "center", mb: "50px" }}>
-          LET SEE WHAT WE DO
-        </Typography>
-      </ThemeProvider>
-      <Box sx={{ width: "125vh" }}>
+      <Typography
+        variant="h3"
+        sx={{
+          alignSelf: "center",
+          color: "text.secondary",
+          mb: "50px",
+          lineHeight: "3.9rem",
+          letterSpacing: "-3.5px",
+          textAlign: "center",
+        }}
+      >
+        LET SEE WHAT WE DO
+      </Typography>
+
+      <Box sx={{ ml: "100px" }}>
         {myPhoto.map((item) => {
           return <img src={item.src} alt={item.alt} style={item.style}></img>;
         })}

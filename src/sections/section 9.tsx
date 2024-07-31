@@ -1,11 +1,4 @@
-import { Box, Typography } from "@mui/material";
-
-import List from "@mui/joy/List";
-import ListSubheader from "@mui/joy/ListSubheader";
-import ListItem from "@mui/joy/ListItem";
-import ListItemButton from "@mui/joy/ListItemButton";
-
-import Sheet from "@mui/joy/Sheet";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 
 function SectionNine() {
   const MyList = [
@@ -31,139 +24,68 @@ function SectionNine() {
       contentFour: "Social Media",
     },
   ];
+
   return (
     <Box
+      display={"flex"}
+      bgcolor={"common.black"}
+      mt={"100px"}
+      gap={"100px"}
+      flex={1}
+      padding={"50px"}
       sx={{
-        borderRadius: "0px 0 20px 20px",
-        display: "flex",
-        width: "1440px",
-        alignItems: "center",
-        alignContent: "center",
-        mt: "100px",
-        backgroundColor: "var(--main-Title)",
+        borderRadius: "0 0 20px 20px",
+        flexDirection: { xs: "column", md: "row" },
       }}
     >
-      <Box
-        sx={{
-          gap: "20px",
-          display: "flex",
-          flexDirection: "column",
-          mt: "100px",
-          mb: "100px",
-        }}
-      >
-        <Typography
-          variant="h2"
-          noWrap
-          component="a"
-          href="#app-bar-with-responsive-menu"
-          sx={{
-            mr: 15,
-            textDecoration: "none",
-          }}
-        >
-          kaison
+      <Box display={"flex"} mr={"220px"} gap={"50px"} flexDirection={"column"}>
+        <Typography variant="h3" color="customBg.main">
+          Kaision
         </Typography>
-        <Typography
-          color="var(--main-color)"
-          sx={{
-            width: "368px",
-
-            fontSize: "54px",
-            fontWeight: 700,
-            lineHeight: "73.54px",
-            textAlign: "left",
-          }}
-        >
+        <Typography variant="h2" color="text.primary">
           Your Football Academy
         </Typography>
-        <Typography
-          color="var(--main-color)"
-          sx={{
-            fontSize: "18px",
-            fontWeight: 600,
-            lineHeight: "30.7px",
-            textAlign: "left",
-          }}
-        >
+        <Typography variant="body2" color="text.primary">
           2021 Ibey Design. Allright reserved
         </Typography>
       </Box>
-      <Box sx={{}}>
-        <Sheet
-          variant="solid"
-          invertedColors
-          sx={{
-            flexGrow: 1,
-            p: 2,
-            borderRadius: { xs: 0, sm: "sm" },
-            backgroundColor: "var(--main-Title)",
-          }}
-        >
+
+      {MyList.map((item) => {
+        return (
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: { md: "flex-start" },
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: 2,
-            }}
+            display={"flex"}
+            sx={{ flexDirection: "column", flex: 1, textAlign: "center" }}
           >
-            {MyList.map((item) => {
-              return (
-                <List
-                  size="sm"
-                  orientation="horizontal"
-                  wrap
+            <Typography
+              sx={{ mt: 4, mb: 2 }}
+              variant="h5"
+              component="div"
+              color={"customBg.main"}
+            >
+              {item.content}
+            </Typography>
+
+            <List>
+              {
+                <ListItem
                   sx={{
-                    flexGrow: 0,
-                    "--ListItem-radius": "8px",
+                    display: "flex",
+                    flexDirection: "column",
+                    mr: "40px",
+                    fontSize: "18px",
+                    fontWeight: "600",
                   }}
                 >
-                  <ListItem nested>
-                    <ListSubheader
-                      sx={{
-                        fontSize: "24px",
-                        fontWeight: 600,
-                        lineHeight: "40.93px",
-                        letterSpacing: "0.5px",
-                        textAlign: "left",
-                        color: "var(--secondry-color)",
-                      }}
-                    >
-                      {item.content}
-                    </ListSubheader>
-                    <List
-                      sx={{
-                        fontSize: "18px",
-                        fontWeight: 600,
-                        lineHeight: "30.7px",
-                        letterSpacing: "0.5px",
-                        textAlign: "left",
-                        color: "var(--main-color)",
-                      }}
-                    >
-                      <ListItem>
-                        <ListItemButton>{item.contentOne}</ListItemButton>
-                      </ListItem>
-                      <ListItem>
-                        <ListItemButton>{item.contentTwo}</ListItemButton>
-                      </ListItem>
-                      <ListItem>
-                        <ListItemButton>{item.contentThree}</ListItemButton>
-                      </ListItem>
-                      <ListItem>
-                        <ListItemButton>{item.contentFour}</ListItemButton>
-                      </ListItem>
-                    </List>
-                  </ListItem>
-                </List>
-              );
-            })}
+                  <ListItemText primary={item.contentOne} />
+                  <ListItemText primary={item.contentTwo} />
+                  <ListItemText primary={item.contentThree} />
+                  <ListItemText primary={item.contentFour} />
+                </ListItem>
+              }
+            </List>
           </Box>
-        </Sheet>
-      </Box>
+        );
+      })}
     </Box>
   );
 }

@@ -13,15 +13,16 @@ function AppBarr() {
   return (
     <AppBar
       position="static"
-      sx={{ borderRadius: "20px 20px 0 0", backgroundColor: "#091524" }}
+      sx={{
+        borderRadius: "20px 20px 0 0",
+        backgroundColor: "common.black",
+        mt: "20px",
+      }}
     >
       <Container
         sx={{
-          width: "1200px",
-          right: "280px",
           display: "flex",
           alignItems: "center",
-          top: "19px",
         }}
       >
         <Toolbar disableGutters>
@@ -29,12 +30,15 @@ function AppBarr() {
             sx={{ display: { xs: "none", md: "flex" }, mr: 2, top: "19px" }}
           />
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 15,
+              mr: { md: 25, xs: 0 },
+              color: "customBg.main",
+              textDecoration: "none",
+              ml: { xs: "50px" },
             }}
           >
             kaison
@@ -43,6 +47,7 @@ function AppBarr() {
           <Box
             sx={{
               flexGrow: 0,
+              mr: 50,
               display: { xs: "none", md: "flex" },
             }}
           >
@@ -51,7 +56,7 @@ function AppBarr() {
                 key={page}
                 sx={{
                   my: 2,
-                  color: "#c0c0c0",
+                  color: "text.disabled",
                   display: "block",
                   fontSize: "18px",
                   fontWeight: "600px",

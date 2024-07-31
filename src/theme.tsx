@@ -10,6 +10,7 @@ declare module "@mui/material/styles/createPalette" {
       main: string;
     };
   }
+
   //   interface PaletteOptions {
   //     customBg: {
   //       main?: string;
@@ -26,22 +27,23 @@ declare module "@mui/material/styles/createPalette" {
 export const theme = createTheme({
   palette: {
     common: {
-      black: "#000",
+      black: "#091524",
       white: "#fff",
     },
     primary: {
       main: "#091524",
     },
     secondary: {
-      main: ` #FFFFFF`,
+      main: "#FFFFFF",
     },
 
     customBg: {
-      main: " #091524",
+      main: "  #287BCA",
     },
     text: {
-      primary: "#C0C0C0",
+      primary: "#FFFFFF",
       secondary: " #091524",
+      disabled: "#C0C0C0",
     },
   },
   breakpoints: {
@@ -57,24 +59,28 @@ export const theme = createTheme({
     fontFamily: ["Open Sans"].join(","),
 
     h1: {
-      fontSize: 62,
-      fontWeight: 700,
+      fontSize: 72,
+      fontWeight: 800,
     },
     h2: {
-      fontSize: 32,
+      fontSize: 54,
       fontWeight: 700,
     },
     h3: {
-      fontSize: 24,
-      fontWeight: 700,
+      fontSize: 48,
+      fontWeight: 800,
     },
     h4: {
-      fontSize: 19,
+      fontSize: 32,
       fontWeight: 700,
     },
     h5: {
-      fontSize: 16,
-      fontWeight: 600,
+      fontSize: 24,
+      fontWeight: 700,
+    },
+    h6: {
+      fontSize: 19,
+      fontWeight: 700,
     },
 
     body1: {
@@ -85,23 +91,24 @@ export const theme = createTheme({
       fontSize: 18,
       fontWeight: 600,
     },
+
     subtitle1: {
-      fontSize: 72,
+      fontSize: 42,
       fontWeight: 800,
     },
-    subtitle2: {
-      fontSize: 54,
-      fontWeight: 700,
-    },
+    // subtitle2: {
+    //   fontSize: 54,
+    //   fontWeight: 700,
+    // },
   },
 });
 
-// theme.typography.h1 = {
-//   ...theme.typography.h1,
-//   [theme.breakpoints.down("sm")]: {
-//     fontSize: 32,
-//   },
-// };
+theme.typography.h1 = {
+  ...theme.typography.h1,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 42,
+  },
+};
 
 // theme.typography.h2 = {
 //   ...theme.typography.h2,

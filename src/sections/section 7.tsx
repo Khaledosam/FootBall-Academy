@@ -1,111 +1,22 @@
-import { Box, ThemeProvider, Typography } from "@mui/material";
-import { mainTitle, subTitle } from "../mui componanets/textStyles";
+import { Box, Typography } from "@mui/material";
+
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 function SectionSeven() {
   const myPhoto = [
     {
       alt: "seven-one",
       src: "./images/seven one.png",
-      style: {
-        width: "387px",
-        height: "234px",
-        top: "170px",
-        left: "120px",
-        borderRadius: "8px ",
-      },
-      styleP: {
-        width: "311px",
-        height: "64px",
-        top: "424px",
-        left: "152px",
-
-        fontSize: "24px",
-        fontWeight: 700,
-        lineHeight: "32px",
-        textAlign: "center",
-      },
       content: "SUMMER CAMPS IN KAISON ACADEMY",
-      icon: (
-        <PlayCircleOutlineIcon
-          sx={{
-            width: "48px",
-            height: "48px",
-            top: "263px",
-            left: "289px",
-
-            color: "var(--main-color)",
-          }}
-        />
-      ),
     },
     {
       alt: "seven-two",
       src: "./images/seven two.png",
-      style: {
-        width: "387px",
-        height: "234px",
-        top: "170px",
-        left: "527px",
-        borderRadius: "8px ",
-      },
-      styleP: {
-        width: "311px",
-        height: "64px",
-        top: "424px",
-        left: "573px",
-
-        fontSize: "24px",
-        fontWeight: 700,
-        lineHeight: "32px",
-        textAlign: "center",
-      },
       content: "START YOUR FOOTBALL JOURNEY WITH US",
-      icon: (
-        <PlayCircleOutlineIcon
-          sx={{
-            width: "48px",
-            height: "48px",
-            top: "263px",
-            left: "696px",
-
-            color: "var(--main-color)",
-          }}
-        />
-      ),
     },
     {
       alt: "seven-three",
       src: "./images/seven three.png",
-      style: {
-        width: "387px",
-        height: "234px",
-        top: "170px",
-        left: "934px",
-        borderRadius: "8px ",
-      },
-      styleP: {
-        width: "192px",
-        height: "64px",
-        top: "424px",
-        left: "1032px",
-        fontSize: "24px",
-        fontWeight: 700,
-        lineHeight: "32px",
-        textAlign: "center",
-      },
       content: "HOW TO BE GOOD PLAYER",
-      icon: (
-        <PlayCircleOutlineIcon
-          sx={{
-            width: "48px",
-            height: "48px",
-            top: "263px",
-            left: "1103px",
-
-            color: "var(--main-color)",
-          }}
-        />
-      ),
     },
   ];
   return (
@@ -113,29 +24,61 @@ function SectionSeven() {
       sx={{
         display: "flex",
         flexDirection: "column",
+        mt: "100px",
       }}
     >
-      <ThemeProvider theme={mainTitle}>
-        <Typography sx={{ width: "521px", alignSelf: "center", mt: "100px" }}>
-          STILL HAVE DOUBTS?
-        </Typography>
-      </ThemeProvider>
-      <Box display={"flex"} gap={"20px"} mt={"50px"}>
+      <Typography
+        variant="h3"
+        sx={{
+          alignSelf: "center",
+          color: "text.secondary",
+          lineHeight: "3.9rem",
+          letterSpacing: "-3.5px",
+          textAlign: "center",
+        }}
+      >
+        STILL HAVE DOUBTS?
+      </Typography>
+
+      <Box
+        display={"flex"}
+        mt={"50px"}
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+      >
         {myPhoto.map((item) => {
           return (
             <Box
               sx={{
+                flex: 1,
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                gap: "15px",
               }}
             >
-              <img src={item.src} alt={item.alt} style={item.style}></img>
-              <ThemeProvider theme={subTitle}>
-                <Typography sx={item.styleP}>{item.content}</Typography>
-              </ThemeProvider>
-              {item.icon}
+              <img
+                src={item.src}
+                alt={item.alt}
+                style={{ width: "387px", borderRadius: "8px" }}
+              ></img>
+
+              <Typography
+                variant="h5"
+                sx={{
+                  lineHeight: "32px",
+                  textAlign: "center",
+                  color: "text.secondary",
+                  width: "400px",
+                }}
+              >
+                {item.content}
+              </Typography>
+              <PlayCircleOutlineIcon
+                sx={{
+                  width: "48px",
+                  height: "48px",
+                  color: "secondary.main",
+                  transform: "translate(-9px, -209px)",
+                }}
+              />
             </Box>
           );
         })}

@@ -1,4 +1,4 @@
-import { Container, CssBaseline } from "@mui/material";
+import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 import SectionONe from "./sections/section 1";
@@ -10,19 +10,21 @@ import SectionSix from "./sections/section 6";
 import SectionSeven from "./sections/section 7";
 import SectionEight from "./sections/section 8";
 import SectionNine from "./sections/section 9";
+import { theme } from "./theme";
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container
         disableGutters
         maxWidth={false}
         sx={{
           display: "flex",
-          bgcolor: "#FFFFFF",
+          bgcolor: "common.white",
           height: "100vh",
           flexDirection: "column",
+          padding: "100px ",
         }}
       >
         <SectionONe />
@@ -35,7 +37,7 @@ function App() {
         <SectionEight />
         <SectionNine />
       </Container>
-    </>
+    </ThemeProvider>
   );
 }
 
