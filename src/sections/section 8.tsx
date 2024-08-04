@@ -8,7 +8,8 @@ function SectionEight() {
         flexDirection: "column",
         alignItems: "center",
         gap: "50px",
-        mt: "100px",
+
+        padding: "50px 60px 50px 60px ",
       }}
     >
       <Typography

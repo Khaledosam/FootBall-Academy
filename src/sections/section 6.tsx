@@ -6,7 +6,7 @@ function SectionSix() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        mt: "100px",
+        mt: "50px",
       }}
     >
       <Typography
@@ -15,8 +15,8 @@ function SectionSix() {
           color: "text.secondary",
           alignSelf: "center",
           lineHeight: "3.9rem",
-          letterSpacing: "-3.5px",
           textAlign: "center",
+          padding: "50px",
         }}
       >
         WHAT THEY SAID
@@ -26,21 +26,20 @@ function SectionSix() {
         sx={{
           display: "flex",
           gap: "20px",
-          mt: "50px",
+          padding: "30px",
           flexDirection: { xs: "column", md: "row" },
         }}
       >
         <Box
           sx={{
             flex: 1,
-            padding: "30px",
             borderRadius: "6px 0px 0px 0px",
             border: "1px solid #52BF7633",
+            padding: "30px",
           }}
         >
           <Typography
             sx={{
-              width: "29px",
               fontSize: "64px",
               color: "customBg.main",
             }}
@@ -60,7 +59,7 @@ function SectionSix() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis
           </Typography>
-          <Box sx={{ display: "flex", width: "217px", ml: "0px", mt: "40px" }}>
+          <Box sx={{ display: "flex", flex: 1, mt: "40px" }}>
             <Avatar
               sx={{
                 width: "40px",
@@ -76,6 +75,7 @@ function SectionSix() {
                 sx={{
                   fontSize: "16px",
                   color: "text.secondary",
+                  padding: "0px 10px 0px 10px",
                 }}
               >
                 Ahmad Metronom
@@ -85,6 +85,7 @@ function SectionSix() {
                 variant="body2"
                 sx={{
                   color: "text.disabled",
+                  padding: "0px 10px 0px 10px",
                 }}
               >
                 Professional player
@@ -122,7 +123,7 @@ function SectionSix() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis
           </Typography>
-          <Box sx={{ display: "flex", width: "217px", ml: "0px", mt: "40px" }}>
+          <Box sx={{ display: "flex", flex: 1, mt: "40px" }}>
             <Avatar
               sx={{
                 width: "40px",
@@ -136,6 +137,7 @@ function SectionSix() {
             <Box>
               <Typography
                 sx={{
+                  padding: "0px 10px 0px 10px",
                   fontSize: "16px",
                   color: "text.secondary",
                 }}
@@ -147,6 +149,7 @@ function SectionSix() {
                 variant="body2"
                 sx={{
                   color: "text.disabled",
+                  padding: "0px 10px 0px 10px",
                 }}
               >
                 Professional player

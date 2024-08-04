@@ -7,7 +7,7 @@ function SectionThree() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        mt: "100px",
+        mt: "50px",
         alignContent: "center",
       }}
     >
@@ -16,8 +16,6 @@ function SectionThree() {
         sx={{
           alignSelf: "center",
           color: "text.secondary",
-          lineHeight: "3.9rem",
-          letterSpacing: "-3.5px",
           textAlign: "center",
         }}
       >
@@ -31,26 +29,31 @@ function SectionThree() {
         <Box
           flex={1}
           display={"flex"}
-          mr={"40px"}
           sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
           <Box
             component="img"
             sx={{
-              width: "285px",
-              mr: "30px",
-              ml: "80px",
+              width: { xs: "80%", md: "285px" },
+              margin: "0 auto",
             }}
             alt="three-right"
             src="./images/three-left.png"
           />
-          <Box display={"flex"} sx={{ flexDirection: "column", mr: "50px" }}>
+          <Box
+            display={"flex"}
+            sx={{
+              flexDirection: "column",
+              ml: { xs: "30px", md: "0px" },
+            }}
+          >
             <Typography
               variant="h4"
               sx={{
                 color: "text.secondary",
                 lineHeight: "41.6px",
                 textAlign: "left",
+                padding: "10px 100px 10px 10px",
               }}
             >
               Immersion Program
@@ -63,7 +66,7 @@ function SectionThree() {
                 lienHeight: "30.4px",
                 letterSpacing: "0.5px",
                 textAlign: "left",
-                mr: "30px",
+                padding: "10px 180px 10px 10px",
               }}
             >
               Recommended Ages 14 - 18
@@ -75,7 +78,7 @@ function SectionThree() {
                 color: "text.disabled",
                 lineHeight: "33px",
                 textAlign: "left",
-                mr: "-16px",
+                padding: "10px 100px 10px 10px",
               }}
             >
               At the Academy, players live under the supervision of our academy
@@ -86,25 +89,34 @@ function SectionThree() {
         <Box
           display={"flex"}
           flex={1}
-          mr={"50px"}
-          sx={{ flexDirection: { xs: "column", md: "row" } }}
+          sx={{
+            flexDirection: { xs: "column", md: "row" },
+            ml: { xs: "", md: "0px" },
+          }}
         >
           <Box
             component="img"
             sx={{
-              width: "285px",
-              mr: "30px",
+              width: { xs: "80%", md: "285px" },
+              margin: "0 auto",
             }}
             alt="three-left"
             src="./images/three-right.png"
           />
-          <Box display={"flex"} flexDirection={"column"} mr={"100px"}>
+          <Box
+            display={"flex"}
+            sx={{
+              flexDirection: "column",
+              ml: { xs: "30px", md: "0px" },
+            }}
+          >
             <Typography
               variant="h4"
               sx={{
-                lineHeight: "41.6px",
                 color: "text.secondary",
+                lineHeight: "41.6px",
                 textAlign: "left",
+                padding: "10px 100px 10px 10px",
               }}
             >
               Professional Program
@@ -113,11 +125,11 @@ function SectionThree() {
             <Typography
               variant="h6"
               sx={{
-                lineHeight: "30.4px",
+                color: "customBg.main",
+                lienHeight: "30.4px",
                 letterSpacing: "0.5px",
                 textAlign: "left",
-                color: "customBg.main",
-                mr: "50px",
+                padding: "10px 180px 10px 10px",
               }}
             >
               Recommended Ages 17-23
@@ -129,6 +141,7 @@ function SectionThree() {
                 color: "text.disabled",
                 lineHeight: "33px",
                 textAlign: "left",
+                padding: "10px 130px 10px 10px",
               }}
             >
               Professional Program is designed to ambitions of playing the game

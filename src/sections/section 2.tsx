@@ -7,7 +7,7 @@ function SectionTwo() {
       display={"flex"}
       sx={{
         flexDirection: { xs: "column-reverse", md: "row-reverse" },
-        mt: "100px",
+        mt: "50px",
       }}
     >
       <Box sx={{ flex: 1 }}>
@@ -15,9 +15,8 @@ function SectionTwo() {
           variant="h3"
           sx={{
             mt: "30px",
-            mb: "50px",
-            letterSpacing: "-3.5px",
-            textAlign: "left",
+            mb: "30px",
+            textAlign: { xs: "center", md: "left" },
             color: "text.secondary",
           }}
         >
@@ -27,13 +26,12 @@ function SectionTwo() {
         <Typography
           variant="body1"
           sx={{
-            mb: "50px",
-            mr: "100px",
+            margin: "30px ",
             bgcolor: "customBg.main",
             lineHeight: "40px",
             letterSpacing: "0.5px",
             textAlign: "left",
-            padding: "30px 88px",
+            padding: "10px 50px 10px 30px",
             borderRadius: "4px 0px 0px 0px",
           }}
         >
@@ -51,9 +49,9 @@ function SectionTwo() {
             color: "text.secondary",
             textAlign: "left",
             lineHeight: "32px",
-            padding: "30px 91px",
+            padding: "10px 80px 10px 30px",
             letterSpacing: "0.5px",
-            mr: "100px",
+            margin: "30px ",
           }}
         >
           Provide the opportunity and gateway for players to play professionally
@@ -63,9 +61,8 @@ function SectionTwo() {
       <Box
         component="img"
         sx={{
-          width: "488px",
-          mr: "100px",
-          ml: "100px",
+          width: { xs: "80%", md: "488px" },
+          margin: "0 auto",
         }}
         alt="two"
         src=".\images\section 2.png"

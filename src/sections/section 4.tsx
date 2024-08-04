@@ -8,7 +8,8 @@ function SectionFour() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        mt: "100px",
+
+        padding: "80px",
       }}
     >
       <Typography
@@ -17,7 +18,6 @@ function SectionFour() {
           alignSelf: "center",
           color: "text.secondary",
           lineHeight: "3.9rem",
-          letterSpacing: "-3.5px",
           textAlign: "center",
         }}
       >
@@ -27,9 +27,10 @@ function SectionFour() {
       <Box
         sx={{
           display: "flex",
-          mb: "100px",
-          mt: "70px",
+
+          mt: "50px",
           flexDirection: { xs: "column", md: "row" },
+          gap: { xs: "30px" },
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -47,7 +48,7 @@ function SectionFour() {
               lineHeight: "30px",
               color: "text.secondary",
               textAlign: "left",
-              mr: "100px",
+              padding: "10px",
             }}
           >
             Personal academic tutors
@@ -68,7 +69,7 @@ function SectionFour() {
               lineHeight: "30px",
               color: "text.secondary",
               textAlign: "left",
-              mr: "100px",
+              padding: "10px",
             }}
           >
             Competitive matches
@@ -89,7 +90,7 @@ function SectionFour() {
               lineHeight: "30px",
               color: "text.secondary",
               textAlign: "left",
-              mr: "100px",
+              padding: "10px",
             }}
           >
             Professional games

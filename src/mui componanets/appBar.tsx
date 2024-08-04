@@ -35,10 +35,9 @@ function AppBarr() {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: { md: 25, xs: 0 },
+              mr: { md: 25, xs: "200px" },
               color: "customBg.main",
               textDecoration: "none",
-              ml: { xs: "50px" },
             }}
           >
             kaison

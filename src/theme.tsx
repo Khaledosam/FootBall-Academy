@@ -67,7 +67,7 @@ export const theme = createTheme({
       fontWeight: 700,
     },
     h3: {
-      fontSize: 48,
+      fontSize: "48px",
       fontWeight: 800,
     },
     h4: {
@@ -84,7 +84,7 @@ export const theme = createTheme({
     },
 
     body1: {
-      fontSize: 20,
+      fontSize: "20px",
       fontWeight: 700,
     },
     body2: {
@@ -106,30 +106,30 @@ export const theme = createTheme({
 theme.typography.h1 = {
   ...theme.typography.h1,
   [theme.breakpoints.down("sm")]: {
-    fontSize: 42,
+    fontSize: "42px",
   },
 };
 
-// theme.typography.h2 = {
-//   ...theme.typography.h2,
-//   [theme.breakpoints.down("sm")]: {
-//     fontSize: 22,
-//   },
-// };
+theme.typography.h3 = {
+  ...theme.typography.h3,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "36px",
+  },
+};
 
-// theme.typography.body1 = {
-//   ...theme.typography.body1,
-//   [theme.breakpoints.down("sm")]: {
-//     fontSize: 12,
-//   },
-// };
+theme.typography.body1 = {
+  ...theme.typography.body1,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "18px",
+  },
+};
 
-// theme.typography.body2 = {
-//   ...theme.typography.body2,
-//   [theme.breakpoints.down("sm")]: {
-//     fontSize: 10,
-//   },
-// };
+theme.typography.h2 = {
+  ...theme.typography.h2,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "42px",
+  },
+};
 
 // theme.typography.subtitle1 = {
 //   ...theme.typography.subtitle1,

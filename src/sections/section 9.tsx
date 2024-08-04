@@ -29,16 +29,15 @@ function SectionNine() {
     <Box
       display={"flex"}
       bgcolor={"common.black"}
-      mt={"100px"}
       gap={"100px"}
       flex={1}
-      padding={"50px"}
+      padding={"30px"}
       sx={{
         borderRadius: "0 0 20px 20px",
         flexDirection: { xs: "column", md: "row" },
       }}
     >
-      <Box display={"flex"} mr={"220px"} gap={"50px"} flexDirection={"column"}>
+      <Box display={"flex"} gap={"20px"} flexDirection={"column"}>
         <Typography variant="h3" color="customBg.main">
           Kaision
         </Typography>
@@ -49,43 +48,45 @@ function SectionNine() {
           2021 Ibey Design. Allright reserved
         </Typography>
       </Box>
-
-      {MyList.map((item) => {
-        return (
-          <Box
-            display={"flex"}
-            sx={{ flexDirection: "column", flex: 1, textAlign: "center" }}
-          >
-            <Typography
-              sx={{ mt: 4, mb: 2 }}
-              variant="h5"
-              component="div"
-              color={"customBg.main"}
+      <Box display={"flex"} flexWrap={"wrap"}>
+        {MyList.map((item) => {
+          return (
+            <Box
+              display={"flex"}
+              sx={{ flexDirection: "column", flex: 1, textAlign: "left" }}
             >
-              {item.content}
-            </Typography>
+              <Typography
+                sx={{ mt: 4, mb: 2 }}
+                variant="h5"
+                component="div"
+                color={"customBg.main"}
+                textAlign={"left"}
+              >
+                {item.content}
+              </Typography>
 
-            <List>
-              {
-                <ListItem
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    mr: "40px",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                  }}
-                >
-                  <ListItemText primary={item.contentOne} />
-                  <ListItemText primary={item.contentTwo} />
-                  <ListItemText primary={item.contentThree} />
-                  <ListItemText primary={item.contentFour} />
-                </ListItem>
-              }
-            </List>
-          </Box>
-        );
-      })}
+              <List>
+                {
+                  <ListItem
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      mr: "40px",
+                      fontSize: "18px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    <ListItemText primary={item.contentOne} />
+                    <ListItemText primary={item.contentTwo} />
+                    <ListItemText primary={item.contentThree} />
+                    <ListItemText primary={item.contentFour} />
+                  </ListItem>
+                }
+              </List>
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 }

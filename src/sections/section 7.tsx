@@ -24,7 +24,6 @@ function SectionSeven() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        mt: "100px",
       }}
     >
       <Typography
@@ -33,18 +32,14 @@ function SectionSeven() {
           alignSelf: "center",
           color: "text.secondary",
           lineHeight: "3.9rem",
-          letterSpacing: "-3.5px",
+          padding: "50px",
           textAlign: "center",
         }}
       >
         STILL HAVE DOUBTS?
       </Typography>
 
-      <Box
-        display={"flex"}
-        mt={"50px"}
-        sx={{ flexDirection: { xs: "column", md: "row" } }}
-      >
+      <Box display={"flex"} sx={{ flexDirection: { xs: "column", md: "row" } }}>
         {myPhoto.map((item) => {
           return (
             <Box
@@ -52,12 +47,16 @@ function SectionSeven() {
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
+                alignItems: "center",
               }}
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                style={{ width: "387px", borderRadius: "8px" }}
+                style={{
+                  width: "327px",
+                  borderRadius: "8px",
+                }}
               ></img>
 
               <Typography
@@ -66,7 +65,7 @@ function SectionSeven() {
                   lineHeight: "32px",
                   textAlign: "center",
                   color: "text.secondary",
-                  width: "400px",
+                  padding: "10px 50px 10px 50px",
                 }}
               >
                 {item.content}

@@ -22,9 +22,8 @@ function App() {
         sx={{
           display: "flex",
           bgcolor: "common.white",
-          height: "100vh",
+          minHeight: "100vh",
           flexDirection: "column",
-          padding: "100px ",
         }}
       >
         <SectionONe />

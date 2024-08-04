@@ -11,15 +11,13 @@ function SectionONe() {
         sx={{
           display: { xs: "flex", md: "flex" },
           flexDirection: { xs: "column", md: "row" },
+          padding: { md: "80px" },
         }}
       >
         <Box
           sx={{
-            mt: "50px",
             display: "flex",
             flexDirection: "column",
-            gap: "50px",
-            padding: "80px",
           }}
         >
           <Typography
@@ -28,6 +26,7 @@ function SectionONe() {
               color: "text.primary",
               letterSpacing: "0.5px",
               textAlign: "left",
+              padding: "30px",
             }}
           >
             EXCELLENCE IN FOOTBALL & EDUCATION
@@ -38,33 +37,37 @@ function SectionONe() {
               lineHeight: "33px",
               textAlign: "left",
               color: "text.disabled",
+              padding: { xs: "0px 30px", md: "0px 100px 0px 0px" },
             }}
           >
             Create the best soccer development environment for ambitious players
             that want to train and play the game at the highest level.
           </Typography>
-          <Box display={"flex"}>
+          <Box
+            display={"flex"}
+            sx={{ justifyContent: "space-between", padding: "40px" }}
+          >
             <Button
               variant="contained"
               sx={{
                 bgcolor: "customBg.main",
                 fontSize: "body2",
                 padding: "20px",
-                mr: { xs: "25px", md: "100px" },
               }}
             >
               Get started
             </Button>
-            <Button
-              variant="text"
-              sx={{ color: "text.primary", mr: { xs: "25px", md: "270px" } }}
-            >
+            <Button variant="text" sx={{ color: "text.primary" }}>
               Our programs
             </Button>
           </Box>
         </Box>
         <Box
-          sx={{ width: "538px", mt: { xs: "0px", md: "125px" }, mr: "80px" }}
+          sx={{
+            width: { xs: "80%", md: "538px" },
+            margin: "0 auto",
+            mb: "30px",
+          }}
           component="img"
           alt="the scrore shoes"
           src="./images/s one.png"
