@@ -9,9 +9,8 @@ function SectionONe() {
       <AppBarr />
       <Box
         sx={{
-          display: { xs: "flex", md: "flex" },
+          display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          padding: { md: "80px" },
         }}
       >
         <Box
@@ -26,7 +25,7 @@ function SectionONe() {
               color: "text.primary",
               letterSpacing: "0.5px",
               textAlign: "left",
-              padding: "30px",
+              padding: { xs: " 30px", md: "15px" },
             }}
           >
             EXCELLENCE IN FOOTBALL & EDUCATION
@@ -37,7 +36,7 @@ function SectionONe() {
               lineHeight: "33px",
               textAlign: "left",
               color: "text.disabled",
-              padding: { xs: "0px 30px", md: "0px 100px 0px 0px" },
+              padding: { xs: "0px 30px", md: "0px 100px 0px 15px" },
             }}
           >
             Create the best soccer development environment for ambitious players
@@ -57,15 +56,19 @@ function SectionONe() {
             >
               Get started
             </Button>
-            <Button variant="text" sx={{ color: "text.primary" }}>
+            <Button
+              variant="text"
+              sx={{ color: "text.primary", marginRight: { md: "30px" } }}
+            >
               Our programs
             </Button>
           </Box>
         </Box>
         <Box
           sx={{
-            width: { xs: "80%", md: "538px" },
+            width: { xs: "80%", md: "100%" },
             margin: "0 auto",
+            padding: { md: " 30px " },
             mb: "30px",
           }}
           component="img"

@@ -29,6 +29,7 @@ function SectionEight() {
           lineHeight: "33px",
           textAlign: "center",
           color: "text.disabled",
+          padding: { md: "10px 100px 10px 100px" },
         }}
       >
         if you need to talk to a Kaison Academy representative, please feel free

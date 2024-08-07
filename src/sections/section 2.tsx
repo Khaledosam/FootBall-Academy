@@ -16,6 +16,7 @@ function SectionTwo() {
           sx={{
             mt: "30px",
             mb: "30px",
+            ml: { md: "30px" },
             textAlign: { xs: "center", md: "left" },
             color: "text.secondary",
           }}
@@ -63,6 +64,7 @@ function SectionTwo() {
         sx={{
           width: { xs: "80%", md: "488px" },
           margin: "0 auto",
+          padding: { md: " 30px " },
         }}
         alt="two"
         src=".\images\section 2.png"

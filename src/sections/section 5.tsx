@@ -1,3 +1,4 @@
+import { Margin } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 
 function SectionFive() {
@@ -5,44 +6,43 @@ function SectionFive() {
     {
       alt: "five-one",
       src: "./images/five one.png",
-      style: {
-        width: { xs: "80%", md: "387px" },
-      },
+
+      width: { xs: "80%", md: "30%", xl: "387px" },
+      Margin: { xs: "0px", md: "0px" },
     },
     {
       alt: "five-two",
       src: "./images/five two.png",
-      style: {
-        width: { xs: "80%", md: "386px" },
-      },
+
+      width: { xs: "80%", md: "30%", xl: "386px" },
+      Margin: { xs: "0px", md: "0px" },
     },
     {
       alt: "five-three",
       src: "./images/five three.png",
-      style: {
-        width: { xs: "80%", md: "387px" },
-      },
+
+      width: { xs: "80%", md: "30%", xl: "387px" },
+      Margin: { xs: "0px", md: "0px" },
     },
     {
       alt: "five-four",
       src: "./images/five four.png",
-      style: {
-        width: { xs: "80%", md: "387px" },
-      },
+
+      width: { xs: "80%", md: "30%", xl: "387px" },
+      Margin: { xs: "0px", md: "-53px" },
     },
     {
       alt: "five-five",
       src: "./images/five five.png",
-      style: {
-        width: { xs: "80%", md: "386px" },
-      },
+
+      width: { xs: "80%", md: "30%", xl: "386px" },
+      Margin: { xs: "0px", md: "0px" },
     },
     {
       alt: "five-six",
       src: "./images/five six.png",
-      style: {
-        width: { xs: "80%", md: "387px" },
-      },
+      width: { xs: "80%", md: "30%", xl: "387px" },
+      Margin: { xs: "0px", md: "-53px" },
     },
   ];
 
@@ -69,13 +69,23 @@ function SectionFive() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: { xs: "column", md: "row" },
           padding: "20px",
           gap: "20px",
+          flexWrap: "wrap",
+          alignItems: { xs: "center", md: "flex-start" },
         }}
       >
         {myPhoto.map((item) => {
-          return <img src={item.src} alt={item.alt} style={item.style}></img>;
+          return (
+            <Box
+              component="img"
+              width={item.width}
+              marginTop={item.Margin}
+              alt={item.alt}
+              src={item.src}
+            />
+          );
         })}
       </Box>
     </Box>

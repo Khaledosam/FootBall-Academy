@@ -54,7 +54,7 @@ function SectionSeven() {
                 src={item.src}
                 alt={item.alt}
                 style={{
-                  width: "327px",
+                  width: "90%",
                   borderRadius: "8px",
                 }}
               ></img>
@@ -65,7 +65,7 @@ function SectionSeven() {
                   lineHeight: "32px",
                   textAlign: "center",
                   color: "text.secondary",
-                  padding: "10px 50px 10px 50px",
+                  padding: { xs: "10px 50px 10px 50px", md: "20px" },
                 }}
               >
                 {item.content}
@@ -75,7 +75,10 @@ function SectionSeven() {
                   width: "48px",
                   height: "48px",
                   color: "secondary.main",
-                  transform: "translate(-9px, -209px)",
+                  transform: {
+                    xs: "translate(-9px, -209px)",
+                    md: "translate(-9px, -209px)",
+                  },
                 }}
               />
             </Box>

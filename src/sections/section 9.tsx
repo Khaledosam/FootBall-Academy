@@ -16,20 +16,13 @@ function SectionNine() {
       contentThree: "Professional",
       contentFour: "Pivate",
     },
-    {
-      content: "About Us",
-      contentOne: "About Us",
-      contentTwo: "Security",
-      contentThree: "Our Offices",
-      contentFour: "Social Media",
-    },
   ];
 
   return (
     <Box
       display={"flex"}
       bgcolor={"common.black"}
-      gap={"100px"}
+      gap={"30px"}
       flex={1}
       padding={"30px"}
       sx={{
@@ -37,7 +30,12 @@ function SectionNine() {
         flexDirection: { xs: "column", md: "row" },
       }}
     >
-      <Box display={"flex"} gap={"20px"} flexDirection={"column"}>
+      <Box
+        display={"flex"}
+        gap={"20px"}
+        flexDirection={"column"}
+        sx={{ flex: { md: "1" } }}
+      >
         <Typography variant="h3" color="customBg.main">
           Kaision
         </Typography>
@@ -56,7 +54,7 @@ function SectionNine() {
               sx={{ flexDirection: "column", flex: 1, textAlign: "left" }}
             >
               <Typography
-                sx={{ mt: 4, mb: 2 }}
+                sx={{ mb: 2 }}
                 variant="h5"
                 component="div"
                 color={"customBg.main"}
@@ -74,6 +72,8 @@ function SectionNine() {
                       mr: "40px",
                       fontSize: "18px",
                       fontWeight: "600",
+                      alignItems: "flex-start",
+                      flexWrap: "wrap",
                     }}
                   >
                     <ListItemText primary={item.contentOne} />
@@ -86,6 +86,37 @@ function SectionNine() {
             </Box>
           );
         })}
+        <Box sx={{ mt: { md: "-30px" } }}>
+          <Typography
+            sx={{ mt: 4, mb: 2 }}
+            variant="h5"
+            component="div"
+            color={"customBg.main"}
+            textAlign={"left"}
+          >
+            {"About Us"}
+          </Typography>
+          <List>
+            {
+              <ListItem
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "row", md: "column" },
+                  fontSize: "18px",
+                  fontWeight: "600",
+                  flexWrap: "wrap",
+
+                  alignItems: { md: "flex-start" },
+                }}
+              >
+                <ListItemText sx={{ mr: "30px" }} primary={"About Us"} />
+                <ListItemText sx={{ mr: "30px" }} primary={"Security"} />
+                <ListItemText sx={{ mr: "30px" }} primary={"Our Offices"} />
+                <ListItemText primary={"Social Media"} />
+              </ListItem>
+            }
+          </List>
+        </Box>
       </Box>
     </Box>
   );
